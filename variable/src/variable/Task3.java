@@ -2,12 +2,9 @@ package variable;
 
 public class Task3 {
 	public static void main(String args[]) {
-		int intNum;
-		double doubleNum;
-		long longNum; 
-		intNum = 219;
-		doubleNum = 364.2;
-		longNum = 123456L;
+		int intNum = 219;
+		double doubleNum = 364.2;
+		long longNum = 123456L; 
 		System.out.println("変更前");
 		System.out.println(intNum);
 		System.out.println(doubleNum);
