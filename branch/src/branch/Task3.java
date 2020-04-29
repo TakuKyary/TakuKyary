@@ -5,9 +5,15 @@ public class Task3 {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		sc.close();	
-		if(a>0) System.out.println("入力された値は正の数です。");
-		if(a==0) System.out.println("入力された値は0です。");
-		if(a<0) System.out.println("入力された値は負の数です。");
+		if(a > 0) {
+			System.out.println("入力された値は正の数です。");
+		}
+		else if(a == 0) {
+			System.out.println("入力された値は0です。");
+		}
+		else {
+			System.out.println("入力された値は負の数です。");
+		}
 		
 	}
 }
