@@ -9,7 +9,7 @@ public class Task3 {
 		int c = sc.nextInt();
 		sc.close();	
 		int sum = a + b + c;
-		double ave1 = (a + b + c)/3.0;
+		double ave1 = (a + b + c) / 3.0;
 		int ave2 = (int)ave1;
 		System.out.println("合計: " + sum);
 		System.out.println("平均(3で割った時): " + ave2);
