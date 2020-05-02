@@ -20,13 +20,15 @@ public class Task5 {
 
 		if(max < numB){
 			max = numB;
-	    }
+		}
 
 		if(max < numC){
-	    	max = numC;
-	    }
+			max = numC;
+		}
 
 		System.out.println("最大値: " + max);
 
 	}
 }
+
+//23,26,27行目インデント修正済
