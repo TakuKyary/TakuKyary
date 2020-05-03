@@ -15,7 +15,7 @@ public class Task5 {
 
 			}
 
-			System.out.println(" ");
+			System.out.println(); //改行
 
 		}
 	}

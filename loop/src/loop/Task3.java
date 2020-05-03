@@ -15,7 +15,7 @@ public class Task3 {
 
 		while(num != 0){ //numを割った回数をカウント
 			num = num / 10;
-			count += 1;
+			count++; //count += 1から修正しました。
 		}
 
 		System.out.print("桁数: " + count); //結果の出力
