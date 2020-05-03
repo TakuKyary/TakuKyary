@@ -11,15 +11,17 @@ public class Task3 {
 			array[i] = r;
 		}
 
+		System.out.print("[");
+
 		for(int i = 0; i < array.length; i++) {
 			if(i == 0){
-				System.out.print("[" + array[i]); //配列の先頭の表示
-			}else if(i > 0 && i < array.length - 1){
-				System.out.print("," + array[i]);
+				System.out.print(array[i]); //配列の先頭の表示
 			}else{
-				System.out.println("," + array[i] + "]"); //配列の末尾表示
+				System.out.print("," + array[i]);
 			}
 		}
+
+		System.out.println("]");
 
 		int max = array[0]; //仮の最大値をarray[0]とする。
 		int min = array[0]; //仮の最小値をarray[0]とする。

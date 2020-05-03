@@ -17,11 +17,9 @@ public class Task2 {
 
 		}
 
-		System.out.println(" ");
+		System.out.println();
 
 		for(int i = array.length - 1; i >= 0; i--){ //配列の要素を逆順で表示
-
-			array[i] = array.length - i;
 
 			if(i == array.length - 1){
 				System.out.print(array[i]);
