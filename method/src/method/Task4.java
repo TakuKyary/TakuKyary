@@ -10,15 +10,15 @@ public class Task4 {
 		boolean b2 = nullCheck(array2);
 		System.out.println(b2);
 	}
-
+	//nullcheck関数
 	public static boolean nullCheck(String[] array) {
-			if(array[0] == null || array[1] == null || array[2] == null) {
-				System.out.println("---配列にnullがある場合---");
-				return true;
-			}else {
-				System.out.println("---配列にnullがない場合---");
-				return false;
-			}
+		if(array[0] == null || array[1] == null || array[2] == null) {
+			System.out.println("---配列にnullがある場合---");
+			return true;
+		}else {
+			System.out.println("---配列にnullがない場合---");
+			return false;
+		}
 	}
 }
 
