@@ -11,7 +11,7 @@ public class Task4 {
 		System.out.println(b2);
 	}
 	//nullcheck関数
-	public static boolean nullCheck(String[] array) {
+	/*public static boolean nullCheck(String[] array) {
 		if(array[0] == null || array[1] == null || array[2] == null) {
 			System.out.println("---配列にnullがある場合---");
 			return true;
@@ -19,6 +19,18 @@ public class Task4 {
 			System.out.println("---配列にnullがない場合---");
 			return false;
 		}
+	}*/
+	
+	public static boolean nullCheck(String[] array) {
+
+		for(String str: array) {
+			if(str == null) {
+				System.out.println("---配列にnullがある場合---");
+				return true;
+			}else {
+				System.out.println("---配列にnullがない場合---");
+				return false;
+			}
+		}	
 	}
 }
-
