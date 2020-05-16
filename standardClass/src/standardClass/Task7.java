@@ -1,16 +1,48 @@
 package standardClass;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-//作成途中です。
+import java.util.Date;
 public class Task7 {
 	public static void main(String[] args) {
-		Calendar cal = Calendar.getInstance();
-		System.out.println(cal.getTime());
-		cal.add(Calendar.DATE, 7);
-		System.out.println(cal.getTime());
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
+		Calendar cal1 = Calendar.getInstance();
+		Calendar cal2 = Calendar.getInstance();
+		Date now = new Date();
 
-		SimpleDateFormat sdf1 = new SimpleDateFormat("現在日時: yyyy年MM月dd日");
-		SimpleDateFormat sdf2 = new SimpleDateFormat("一週間後: yyyy年MM月dd日");
-		SimpleDateFormat sdf3 = new SimpleDateFormat("一年後　: yyyy年MM月dd日()");
+		cal1.setTime(now);
+		cal2.setTime(now);
+		System.out.println("現在日時: " + sdf.format(now));
+
+		cal1.add(Calendar.DAY_OF_MONTH, 7);
+		Date d1 = cal1.getTime();
+		System.out.println("１週間後: " + sdf.format(d1));
+
+		cal2.set(Calendar.YEAR, 2021);
+		Date d2 = cal2.getTime();
+		System.out.print("１年後　: " + sdf.format(d2));
+
+		switch(Calendar.DAY_OF_WEEK) {
+		case 1:
+			System.out.print("(月)");
+			break;
+		case 2:
+			System.out.print("(火)");
+			break;
+		case 3:
+			System.out.print("(水)");
+			break;
+		case 4:
+			System.out.print("(木)");
+			break;
+		case 5:
+			System.out.print("(金)");
+			break;
+		case 6:
+			System.out.print("(土)");
+			break;
+		default:
+			System.out.print("(日)");
+
+		}
 	}
-}
+} 
