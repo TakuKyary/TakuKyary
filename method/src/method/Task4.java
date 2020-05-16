@@ -6,8 +6,10 @@ public class Task4 {
 		String[] array1 = {"a", "b", "c"};
 		String[] array2 = {"a", null, "c"};
 		boolean b1 = nullCheck(array1);
+		System.out.println("---配列にnullがない場合---");
 		System.out.println(b1);
 		boolean b2 = nullCheck(array2);
+		System.out.println("---配列にnullがある場合---");
 		System.out.println(b2);
 	}
 	//nullcheck関数
@@ -20,17 +22,15 @@ public class Task4 {
 			return false;
 		}
 	}*/
-	
-	public static boolean nullCheck(String[] array) {
 
+	public static boolean nullCheck(String[] array) {
+		boolean t = true;
+		boolean f = false;
 		for(String str: array) {
 			if(str == null) {
-				System.out.println("---配列にnullがある場合---");
-				return true;
-			}else {
-				System.out.println("---配列にnullがない場合---");
-				return false;
+				return t;
 			}
-		}	
+		}
+		return f;
 	}
 }
