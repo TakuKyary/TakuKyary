@@ -42,7 +42,7 @@ public class Task7 {
 			break;
 		default:
 			System.out.print("(日)");
-
+			break;
 		}
 	}
 } 
