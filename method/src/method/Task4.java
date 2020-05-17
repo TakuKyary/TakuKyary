@@ -24,13 +24,11 @@ public class Task4 {
 	}*/
 
 	public static boolean nullCheck(String[] array) {
-		boolean t = true;
-		boolean f = false;
 		for(String str: array) {
 			if(str == null) {
-				return t;
+				return true;
 			}
 		}
-		return f;
+		return false;
 	}
 }
