@@ -20,7 +20,7 @@ public class Task4 extends HttpServlet {
 		int index = random.nextInt(kuji.length); 
 		
 		HtmlTemplate.header(out);
-		out.println("<p1>↓占い結果↓</p1>");
+		out.println("<p>↓占い結果↓</p>");
 		out.println("<h1>" + kuji[index] + "</h1>");
 		HtmlTemplate.footer(out);
 	}
