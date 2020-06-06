@@ -1,7 +1,7 @@
-package jp.co.colla_tech;
+package practice;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.Date;
 import java.util.Random;
 
 import javax.servlet.ServletException;
@@ -12,19 +12,18 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/Task4")
 public class Task4 extends HttpServlet {
-
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		response.setContentType("text/html; charset = UTF-8");
-		PrintWriter out = response.getWriter();
 		Random random =new Random();
-		String[] kuji = new String[]{"大吉", "中吉", "小吉", "末吉", "凶", "大凶"};
-		int index = random.nextInt(kuji.length); 
+		String[] fortune = new String[]{"大吉", "中吉", "小吉", "末吉", "凶", "大凶"};
+		Date today = new Date();
+		int index = random.nextInt(fortune.length);
 		
-		HtmlTemplate.header(out);
-		out.println("<p>↓占い結果↓</p>");
-		out.println("<h1>" + kuji[index] + "</h1>");
-		HtmlTemplate.footer(out);
+		FortuneBean fortuneData = new FortuneBean();
+		fortuneData.setToday(today);
+		fortuneData.setFortune(fortune[index]);
+		request.setAttribute("SAMPLE", fortuneData);
+		request.getRequestDispatcher("WEB-INF/jsp/fortune_result.jsp").forward(request, response);
 	}
-
 }
