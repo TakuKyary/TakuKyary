@@ -15,4 +15,4 @@ public class Task2 extends HttpServlet {
 			throws ServletException, IOException{
 		request.getRequestDispatcher("WEB-INF/jsp/hello.jsp").forward(request, response);
 	}
-	}
+}
