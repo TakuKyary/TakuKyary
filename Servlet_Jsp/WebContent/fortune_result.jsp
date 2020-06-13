@@ -5,7 +5,7 @@
 <html>
 <head>
 <%
-	FortuneBean fortuneBean = (FortuneBean) request.getAttribute("FORTUNE");
+	FortuneBean fortuneBean = (FortuneBean) request.getAttribute("fortune");
 %>
 <meta charset="UTF-8">
 <title>Fortune Result</title>

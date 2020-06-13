@@ -23,7 +23,7 @@ public class Task4 extends HttpServlet {
 		FortuneBean fortuneData = new FortuneBean();
 		fortuneData.setToday(today);
 		fortuneData.setFortune(fortune[index]);
-		request.setAttribute("FORTUNE", fortuneData);
+		request.setAttribute("fortune", fortuneData);
 		request.getRequestDispatcher("WEB-INF/jsp/fortune_result.jsp").forward(request, response);
 	}
 }
