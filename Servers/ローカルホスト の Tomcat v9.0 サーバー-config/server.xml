@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Servlet_Jsp" path="/Servlet_Jsp" reloadable="false" source="org.eclipse.jst.jee.server:Servlet_Jsp"/><Context docBase="html_jsp" path="/html_jsp" reloadable="false" source="org.eclipse.jst.jee.server:html_jsp"/><Context docBase="dataOperationhoge" path="/dataOperationhoge" reloadable="false" source="org.eclipse.jst.jee.server:dataOperationhoge"/><Context docBase="dataOperation" path="/dataOperation" reloadable="false" source="org.eclipse.jst.jee.server:dataOperation"/></Host>
+      <Context docBase="Servlet_Jsp" path="/Servlet_Jsp" reloadable="false" source="org.eclipse.jst.jee.server:Servlet_Jsp"/><Context docBase="html_jsp" path="/html_jsp" reloadable="false" source="org.eclipse.jst.jee.server:html_jsp"/><Context docBase="dataOperationhoge" path="/dataOperationhoge" reloadable="false" source="org.eclipse.jst.jee.server:dataOperationhoge"/><Context docBase="Test" path="/Test" reloadable="false" source="org.eclipse.jst.jee.server:Test"/><Context docBase="DB_operation" path="/DB_operation" reloadable="false" source="org.eclipse.jst.jee.server:DB_operation"/><Context docBase="hogehoge" path="/hogehoge" reloadable="false" source="org.eclipse.jst.jee.server:hogehoge"/><Context docBase="dataOperation1" path="/dataOperation1" reloadable="false" source="org.eclipse.jst.jee.server:dataOperation1"/><Context docBase="dataOperation" path="/dataOperation" reloadable="false" source="org.eclipse.jst.jee.server:dataOperation"/></Host>
     </Engine>
   </Service>
 </Server>
