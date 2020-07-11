@@ -33,7 +33,7 @@ public class CountSession extends HttpServlet {
 
 		if(num != null) {
 			session.setAttribute("count", num + 1);
-			out.println("<p>" + num + "回目の訪問です</p>");
+			out.println("<p>" + ( num + 1 ) + "回目の訪問です</p>");
 		}else {
 			out.println("<p>初めての訪問です</p>");
 			HttpSession newSession = request.getSession();
