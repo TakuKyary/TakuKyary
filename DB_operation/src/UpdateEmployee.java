@@ -25,16 +25,10 @@ public class UpdateEmployee extends HttpServlet {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/task1?serverTimezone=JST", "root", "");
 			System.out.println("DB接続が成功しました。");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}catch(ClassNotFoundException e) {
-			e.printStackTrace();
-		}
 
-		String sql = "UPDATE employee SET name = ? WHERE id = ?";
-		PreparedStatement ps;
+			String sql = "UPDATE employee SET name = ? WHERE id = ?";
+			PreparedStatement ps;
 
-		try{
 			ps = con.prepareStatement(sql);
 			String name = request.getParameter("name");
 			ps.setString(1, name);
@@ -50,6 +44,8 @@ public class UpdateEmployee extends HttpServlet {
 			System.out.println(result + "行が追加されました");
 
 		}catch(SQLException e) {
+			e.printStackTrace();
+		}catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}finally {
 			if (con != null) {

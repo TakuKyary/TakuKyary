@@ -26,15 +26,6 @@ public class search extends HttpServlet {
 		response.setContentType("text/html; charset = UTF-8");
 		PrintWriter out = response.getWriter();
 
-		out.println("<!DOCTYPE html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<meta charset = 'UTF-8'>");
-		out.println("<title>検索結果</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<p>検索結果</p>");
-
 		Connection con = null;
 
 		try {
@@ -47,6 +38,15 @@ public class search extends HttpServlet {
 			ps.setString(1, "%" + name + "%");
 
 			ResultSet rs = ps.executeQuery();
+
+			out.println("<!DOCTYPE html>");
+			out.println("<html>");
+			out.println("<head>");
+			out.println("<meta charset = 'UTF-8'>");
+			out.println("<title>検索結果</title>");
+			out.println("</head>");
+			out.println("<body>");
+			out.println("<p>検索結果</p>");
 
 			while(rs.next()) {
 				out.println("ID:" + rs.getInt("id") + "<br>");

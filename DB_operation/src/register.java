@@ -26,16 +26,10 @@ public class register extends HttpServlet {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/task1?serverTimezone=JST", "root", "");
 			System.out.println("DB接続が成功しました。");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}catch(ClassNotFoundException e) {
-			e.printStackTrace();
-		}
 
-		String sql = "INSERT INTO employee(id, name, birthday, age) VALUES(?, ?, ?, ?)";
-		PreparedStatement ps;
+			String sql = "INSERT INTO employee(id, name, birthday, age) VALUES(?, ?, ?, ?)";
+			PreparedStatement ps;
 
-		try{
 			ps = con.prepareStatement(sql);
 			String id = request.getParameter("id");
 			int i = Integer.parseInt(id);
@@ -56,6 +50,8 @@ public class register extends HttpServlet {
 			System.out.println(result + "行が追加されました");
 
 		}catch(SQLException e) {
+			e.printStackTrace();
+		}catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}finally {
 			if (con != null) {
