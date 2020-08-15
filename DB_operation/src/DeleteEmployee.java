@@ -25,16 +25,10 @@ public class DeleteEmployee extends HttpServlet {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/task1?serverTimezone=JST", "root", "");
 			System.out.println("DB接続が成功しました。");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}catch(ClassNotFoundException e) {
-			e.printStackTrace();
-		}
 
-		String sql = "DELETE FROM employee WHERE id = ?";
-		PreparedStatement ps;
+			String sql = "DELETE FROM employee WHERE id = ?";
+			PreparedStatement ps;
 
-		try{
 			ps = con.prepareStatement(sql);
 			String id = request.getParameter("id");
 			int i = Integer.parseInt(id);
@@ -45,8 +39,9 @@ public class DeleteEmployee extends HttpServlet {
 			ps.close();
 
 			System.out.println(result + "行が追加されました");
-
 		}catch(SQLException e) {
+			e.printStackTrace();
+		}catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}finally {
 			if (con != null) {
